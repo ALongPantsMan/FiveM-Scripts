@@ -88,9 +88,9 @@ local choice_asklc = {function(player,choice)
         if ok then
           MySQL.query("vRP/dmv_search", {id = nuser_id}, function(rows, affected)
             if #rows > 0 then
-			  vRPclient.notify(player,{"User license: ~g~OK"})
+			  vRPclient.notify(player,{"User license: ~g~Valid Liscense"})
 			else
-			  vRPclient.notify(player,{"User license: ~r~REQUIRED"})
+			  vRPclient.notify(player,{"User license: ~r~UNLISCENSED"})
             end
           end)
         else
